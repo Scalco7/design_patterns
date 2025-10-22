@@ -61,7 +61,6 @@ Para executar os exemplos localmente, siga os passos abaixo.
 
 *   [Node.js](https://nodejs.org/en/) (versão 16 ou superior)
 *   [TypeScript](https://www.typescriptlang.org/)
-*   [ts-node](https://github.com/TypeStrong/ts-node) para executar os arquivos `.ts` diretamente.
 
 ### Instalação
 
@@ -80,10 +79,10 @@ Para executar os exemplos localmente, siga os passos abaixo.
 
 ### Executando um Exemplo
 
-Para executar um padrão específico, utilize o `ts-node`. Por exemplo, para rodar o padrão `Singleton`:
+Para executar um padrão específico, você pode usar o comando `npm run <nome-do-padrao>`. Por exemplo, para rodar o padrão `Singleton`:
 
 ```sh
-npx ts-node ./creational_patterns/singleton.ts
+npm run singleton
 ```
 
 ## 🙌 Como Contribuir

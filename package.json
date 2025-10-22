@@ -1,5 +1,30 @@
 {
+  "scripts": {
+    "singleton": "npx tsx ./creational_patterns/singleton.ts",
+    "factory": "npx tsx ./creational_patterns/factory.ts",
+    "abstract": "npx tsx ./creational_patterns/abstract.ts",
+    "builder": "npx tsx ./creational_patterns/builder.ts",
+    "prototype": "npx tsx ./creational_patterns/prototype.ts",
+    "adapter": "npx tsx ./structural_patterns/adapter.ts",
+    "bridge": "npx tsx ./structural_patterns/bridge.ts",
+    "composite": "npx tsx ./structural_patterns/composite.ts",
+    "decorator": "npx tsx ./structural_patterns/decorator.ts",
+    "facade": "npx tsx ./structural_patterns/facade.ts",
+    "flyweight": "npx tsx ./structural_patterns/flyweight.ts",
+    "proxy": "npx tsx ./structural_patterns/proxy.ts",
+    "command": "npx tsx ./behavioral_patterns/command.ts",
+    "cor": "npx tsx ./behavioral_patterns/cor.ts",
+    "iterator": "npx tsx ./behavioral_patterns/iterator.ts",
+    "mediator": "npx tsx ./behavioral_patterns/mediator.ts",
+    "observer": "npx tsx ./behavioral_patterns/observer.ts",
+    "strategy": "npx tsx ./behavioral_patterns/strategy.ts",
+    "state": "npx tsx ./behavioral_patterns/state.ts"
+  },
   "devDependencies": {
-    "@types/node": "^24.9.1"
+    "@types/node": "^24.9.1",
+    "tsx": "^4.16.2"
+  },
+  "dependencies": {
+    "axios": "^1.12.2"
   }
 }
