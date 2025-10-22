@@ -49,10 +49,12 @@ class IdleState implements PlayerState {
 
   pause(): void {
     this.player.showStatus("Não é possível pausar. O player está parado.");
+    this.player.setState(new DisabledState(this.player));
   }
 
   stop(): void {
     this.player.showStatus("O player já está parado.");
+    this.player.setState(new DisabledState(this.player));
   }
 }
 
@@ -66,6 +68,7 @@ class PlayingState implements PlayerState {
 
   play(): void {
     this.player.showStatus("Já está tocando.");
+    this.player.setState(new DisabledState(this.player));
   }
 
   pause(): void {
@@ -94,11 +97,32 @@ class PausedState implements PlayerState {
 
   pause(): void {
     this.player.showStatus("O player já está pausado.");
+    this.player.setState(new DisabledState(this.player));
   }
 
   stop(): void {
     this.player.showStatus("Parando reprodução...");
     this.player.setState(new IdleState(this.player));
+  }
+}
+
+class DisabledState implements PlayerState {
+  private player: MusicPlayer;
+
+  constructor(player: MusicPlayer) {
+    this.player = player;
+  }
+
+  play(): void {
+    this.player.showStatus("O player está desabilitado.");
+  }
+
+  pause(): void {
+    this.player.showStatus("O player está desabilitado.");
+  }
+
+  stop(): void {
+    this.player.showStatus("O player está desabilitado.");
   }
 }
 
@@ -108,6 +132,7 @@ player.play();   // Idle → Playing
 player.pause();  // Playing → Paused
 player.play();   // Paused → Playing
 player.stop();   // Playing → Idle
-player.pause();  // Idle → erro lógico
+player.pause();  // Idle → erro lógico (Disabled)
+player.pause();  // Disabled → show error
 
 //TODO Adicionar um novo estado Disabled onde o player não poderá ser controlado, o estado será ativado em caso de erro lógico
