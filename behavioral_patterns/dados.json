@@ -1,0 +1,35 @@
+[
+    {
+        "nome": "João",
+        "idade": 30,
+        "email": "joao@example.com",
+        "ativo": true,
+        "interesses": [
+            "programação",
+            "música",
+            "esportes"
+        ]
+    },
+    {
+        "nome": "João",
+        "idade": 30,
+        "email": "joao@example.com",
+        "ativo": true,
+        "interesses": [
+            "programação",
+            "música",
+            "esportes"
+        ]
+    },
+    {
+        "nome": "João",
+        "idade": 30,
+        "email": "joao@example.com",
+        "ativo": true,
+        "interesses": [
+            "programação",
+            "música",
+            "esportes"
+        ]
+    }
+]
